@@ -12,11 +12,11 @@ const gst2=process.env.gst2;
 
 const port=process.env.PORT||3000;
 const app=express();
-app.listen(port,()=>{
+app.listen(process.env.PORT,()=>{
     console.log("started");
 });
-app.use(bodyParser.urlencoded({extended:true}));
-app.use(bodyParser.json());
+app.use(express.urlencoded({extended:true}));
+app.use(express.json());
 
 
 
@@ -176,3 +176,4 @@ app.put("/login/:username", async (req,res)=>{
 });
 
 export default app;
+ 
