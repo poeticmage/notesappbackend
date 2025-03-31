@@ -1,8 +1,7 @@
 {
     "version": 2,
     "routes": [
-      { "src": "/loginGet", "dest": "/loginGet.js" },
-      { "src": "/loginPut", "dest": "/loginPut.js" },
-      { "src": "/anotherFile", "dest": "/anotherFile.js" }
-    ]
+  { "src": "/api/login", "dest": "/server.js" },
+  { "src": "/api/login/(.*)", "dest": "/server.js" }
+]
   }
