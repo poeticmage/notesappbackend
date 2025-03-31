@@ -175,4 +175,4 @@ app.put("/login/:username", async (req,res)=>{
     waitHandling();
 });
 
-module.exports = app;
+export default app;
