@@ -82,5 +82,6 @@ router.put("/user/:username", async (req,res)=>{
     queue.push({req,res});
     waitHandling();
 });
-
-export default router;
+export default (req, res) => {
+    app(req, res);  // This is how you tell Vercel to use Express
+  };
