@@ -20,6 +20,8 @@ app.use(cors({ origin: "https://notes-sepia-ten.vercel.app", credentials: true }
 app.use(loginget);
 app.use(loginput);
 
-app.listen(3000,()=>{
-    console.log("started");
-});
+// app.listen(3000,()=>{
+//     console.log("started");
+// });
+
+export default app;
