@@ -12,18 +12,18 @@ const gst2=process.env.gst2;
 
 
 const app=express();
-// app.listen(3000,()=>{
-//     console.log("started");
-// });
-app.use(express.urlencoded({extended:true}));
-app.use(express.json());
+app.listen(3000,()=>{
+    console.log("started");
+});
+app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.json());
 
 
 
 
 //GET
-export default async function handler(req, res) {
- if(req.method==="GET"){   
+
+app.get("/login",async (req,res)=>{
 
     var GIVENPASSWORD=req.query.password;
     var GIVENNAME=req.query.username; 
@@ -94,10 +94,7 @@ const userdata=JSON.parse(userdataF.data.files[fileKeyF].content);
     catch(e){
         console.error(e);
     }
-
-
- }
-
+});
 
 
 
@@ -107,7 +104,11 @@ const userdata=JSON.parse(userdataF.data.files[fileKeyF].content);
 
 
 
- if (req.method === "PUT") {
+
+
+
+
+
 
 //put request  to jsonbin to be done with queue handling...
 const queue=[];//first in first serve os...
@@ -168,8 +169,10 @@ const usersds=JSON.parse(usersdsF.data.files[fileKeyF].content);
 }
 
 
-    queue.push({ req, res });
-    waitHandling();
 
- }
-}
+app.put("/login/:username", async (req,res)=>{
+    queue.push({req,res});
+    waitHandling();
+});
+
+module.exports = app;
