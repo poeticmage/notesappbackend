@@ -14,6 +14,7 @@ const app=express();
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.use(cors());//For handling different server
+app.use(cors({ origin: "https://notes-sepia-ten.vercel.app", credentials: true }));
 
 //Requests handling...
 app.use(loginget);
