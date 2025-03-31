@@ -1,8 +1,8 @@
 
 
-import dotenv from "./.env";
+// import dotenv from "./.env";
 
-dotenv.config();
+// dotenv.config();
 
 export const tokenT=process.env.tokenT;
 export const gst1=process.env.gst1;
