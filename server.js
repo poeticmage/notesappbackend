@@ -4,8 +4,8 @@ import bodyParser from "body-parser";
 import { Octokit } from "@octokit/core"; //git gist documentations
 import cors from "cors";//To handle different server request
 import { tokenT, gst1, gst2 } from "./config.js";
-import loginget from "./loginGet.js";
-import loginput from "./loginPut.js";
+import loginget from "./api/loginGet.js";
+import loginput from "./api/loginPut.js";
 
 //start
 
