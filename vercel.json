@@ -1,0 +1,9 @@
+{
+    "version": 2,
+    "builds": [{ "src": "*.js", "use": "@vercel/node" }],
+    "routes": [
+      { "src": "/loginGet", "dest": "/loginGet.js" },
+      { "src": "/loginPut", "dest": "/loginPut.js" },
+      { "src": "/anotherFile", "dest": "/anotherFile.js" }
+    ]
+  }
