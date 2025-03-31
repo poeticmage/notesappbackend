@@ -78,7 +78,7 @@ const usersds=JSON.parse(usersdsF.data.files[fileKeyF].content);
 
 
 router.put("/user/:username", async (req,res)=>{
-    // console.log("Received request for username: ", req.params.username);
+    console.log("Received request for username: ", req.params.username);
     queue.push({req,res});
     waitHandling();
 });
