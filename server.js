@@ -18,7 +18,7 @@ app.use(cors({ origin: "https://notes-sepia-ten.vercel.app", credentials: true }
 
 //Requests handling...
 app.use('/api/login',loginget);
-app.use('/api/user/:username',loginput);
+app.use('/api/user',loginput);
 
 // app.listen(3000,()=>{
 //     console.log("started");
