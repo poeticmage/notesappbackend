@@ -14,7 +14,7 @@ const app=express();
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.use(cors());//For handling different server
-const router=app.Router();
+const router=express.Router();
 
 router.get("/login",async (req,res)=>{
 
