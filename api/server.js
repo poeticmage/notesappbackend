@@ -10,9 +10,9 @@ const gst1=process.env.gst1;
 const gst2=process.env.gst2;
 // GIST UPDATES ARE ALWAYS MADE ON THE JSON FILE OF THE GIST (AGGRESSIVE CACHING ON GITHUB)
 
-
+const port=process.env.PORT||3000;
 const app=express();
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log("started");
 });
 app.use(bodyParser.urlencoded({extended:true}));
