@@ -17,8 +17,8 @@ app.use(cors());//For handling different server
 app.use(cors({ origin: "https://notes-sepia-ten.vercel.app", credentials: true }));
 
 //Requests handling...
-app.use(loginget);
-app.use(loginput);
+app.use('/api',loginget);
+app.use('api',loginput);
 
 // app.listen(3000,()=>{
 //     console.log("started");
